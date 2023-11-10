@@ -14,7 +14,7 @@ struct SwipeStrikethroughExample: View {
     var body: some View {
         VStack {
             GenericSwipeToCompleteText(complete: $checked, text: text)
-                .font(.system(size: 18))
+                .font(.system(size: 24))
                 .fontWeight(.semibold)
                 .fontDesign(.serif)
         }

@@ -11,7 +11,7 @@ import SwiftUI
 struct FunSwiftUIEffectsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SwipeStrikethroughExample()
         }
     }
 }
