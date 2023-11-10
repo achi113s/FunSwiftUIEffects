@@ -12,7 +12,7 @@
 		4420963A2AFDE77C00E586BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 442096392AFDE77C00E586BB /* Assets.xcassets */; };
 		4420963D2AFDE77C00E586BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4420963C2AFDE77C00E586BB /* Preview Assets.xcassets */; };
 		442096452AFDE79600E586BB /* RubberBanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442096432AFDE79600E586BB /* RubberBanding.swift */; };
-		442096462AFDE79600E586BB /* GenericSwipeToCompleteText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442096442AFDE79600E586BB /* GenericSwipeToCompleteText.swift */; };
+		442096462AFDE79600E586BB /* GenericSwipeToStrikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442096442AFDE79600E586BB /* GenericSwipeToStrikethrough.swift */; };
 		442096492AFDE7C200E586BB /* Text-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442096482AFDE7C200E586BB /* Text-Extensions.swift */; };
 		4420964B2AFDE7E600E586BB /* SwipeStrikethroughExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4420964A2AFDE7E600E586BB /* SwipeStrikethroughExample.swift */; };
 /* End PBXBuildFile section */
@@ -24,7 +24,7 @@
 		442096392AFDE77C00E586BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4420963C2AFDE77C00E586BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		442096432AFDE79600E586BB /* RubberBanding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RubberBanding.swift; sourceTree = "<group>"; };
-		442096442AFDE79600E586BB /* GenericSwipeToCompleteText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericSwipeToCompleteText.swift; sourceTree = "<group>"; };
+		442096442AFDE79600E586BB /* GenericSwipeToStrikethrough.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericSwipeToStrikethrough.swift; sourceTree = "<group>"; };
 		442096482AFDE7C200E586BB /* Text-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Text-Extensions.swift"; sourceTree = "<group>"; };
 		4420964A2AFDE7E600E586BB /* SwipeStrikethroughExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeStrikethroughExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +79,7 @@
 		442096472AFDE79C00E586BB /* SwipeToStrikethroughText */ = {
 			isa = PBXGroup;
 			children = (
-				442096442AFDE79600E586BB /* GenericSwipeToCompleteText.swift */,
+				442096442AFDE79600E586BB /* GenericSwipeToStrikethrough.swift */,
 				442096432AFDE79600E586BB /* RubberBanding.swift */,
 				442096482AFDE7C200E586BB /* Text-Extensions.swift */,
 				4420964A2AFDE7E600E586BB /* SwipeStrikethroughExample.swift */,
@@ -161,7 +161,7 @@
 				4420964B2AFDE7E600E586BB /* SwipeStrikethroughExample.swift in Sources */,
 				442096382AFDE77B00E586BB /* ContentView.swift in Sources */,
 				442096452AFDE79600E586BB /* RubberBanding.swift in Sources */,
-				442096462AFDE79600E586BB /* GenericSwipeToCompleteText.swift in Sources */,
+				442096462AFDE79600E586BB /* GenericSwipeToStrikethrough.swift in Sources */,
 				442096362AFDE77B00E586BB /* FunSwiftUIEffectsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

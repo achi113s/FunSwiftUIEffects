@@ -8,10 +8,10 @@
 import CoreHaptics
 import SwiftUI
 
-struct GenericSwipeToCompleteText: View {
+struct GenericSwipeToStrikethrough: View {
     //MARK: - State
     /// Should the text be strikethrough already?
-    @Binding private var isMarkedComplete: Bool
+    @Binding private var isStruckthrough: Bool
     
     /// Use this to animated the strikethrough as you pull the text.
     @State private var progress: CGFloat = 0.0
@@ -22,8 +22,8 @@ struct GenericSwipeToCompleteText: View {
     private var textColor: Color = .black
     private var strikethroughColor: Color = .black
     
-    init(complete isMarkedComplete: Binding<Bool>, text: String) {
-        self._isMarkedComplete = isMarkedComplete
+    init(complete isStruckThrough: Binding<Bool>, text: String) {
+        self._isStruckthrough = isStruckThrough
         self.text = text
     }
     
@@ -37,24 +37,24 @@ struct GenericSwipeToCompleteText: View {
                 )
                 .offset(offset)
                 .gesture(
-                    swipeToCompleteGesture
+                    swipeToStrikethroughGesture
                 )
         }
     }
     
-    public func textColor(_ color: Color) -> GenericSwipeToCompleteText {
+    public func textColor(_ color: Color) -> GenericSwipeToStrikethrough {
         var view = self
         view.textColor = color
         return view
     }
     
-    public func strikethroughColor(_ color: Color) -> GenericSwipeToCompleteText {
+    public func strikethroughColor(_ color: Color) -> GenericSwipeToStrikethrough {
         var view = self
         view.strikethroughColor = color
         return view
     }
     
-    private var swipeToCompleteGesture: some Gesture {
+    private var swipeToStrikethroughGesture: some Gesture {
         DragGesture()
             .onChanged { dragValue in
                 /// Only allow dragging from right to left.
@@ -70,7 +70,7 @@ struct GenericSwipeToCompleteText: View {
                 
                 self.offset.width = min(rubberBanded, dragLimit)
                 
-                if !self.isMarkedComplete {
+                if !self.isStruckthrough {
                     self.progress = self.offset.width / dragLimit
                 }
             }
@@ -79,9 +79,9 @@ struct GenericSwipeToCompleteText: View {
                 // set strikethrough accoordingly.
                 if self.offset.width > 50 {
                     withAnimation(.easeInOut) {
-                        isMarkedComplete.toggle()
+                        isStruckthrough.toggle()
                         
-                        if self.isMarkedComplete {
+                        if self.isStruckthrough {
                             self.progress = 1.0
                         } else {
                             self.progress = 0.0
@@ -92,7 +92,7 @@ struct GenericSwipeToCompleteText: View {
                 } else {
                     /// If the full drag wasn't completed and the item is not
                     /// completed, set strikethrough progress back to zero.
-                    if !isMarkedComplete {
+                    if !isStruckthrough {
                         withAnimation(.easeInOut) {
                             self.progress = 0.0
                         }
@@ -108,5 +108,5 @@ struct GenericSwipeToCompleteText: View {
 }
 
 #Preview {
-    GenericSwipeToCompleteText(complete: .constant(false), text: "e.g. 1 cup (250ml) whole milk")
+    GenericSwipeToStrikethrough(complete: .constant(false), text: "e.g. 1 cup (250ml) whole milk")
 }
